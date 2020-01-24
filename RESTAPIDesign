@@ -1,0 +1,15 @@
+@RequestMapping(path = "/syslog/?duration={duration}&limit={limit}&offset={offset}", method = RequestMethod.GET)
+	public ResponseEntity<Syslog> syslog() {
+		return new ResponseEntity<List<Syslog>>(syslog, HttpStatus.OK);
+	}
+	
+	
+@RequestMapping(path = "/syslog/stats?duration={duration}", method = RequestMethod.GET)
+	public ResponseEntity<Statistics> syslog() {
+		return new ResponseEntity<Statistics>(stats, HttpStatus.OK);
+	}
+
+@RequestMapping(path = "/syslog", method = RequestMethod.POST)
+	public ResponseEntity<Syslog> add() {
+		return new ResponseEntity<Syslog>(syslog, HttpStatus.OK);
+	}
