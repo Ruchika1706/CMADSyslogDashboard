@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        <h1 align="left">
+        <h1 align="center">
           Log Dashboard
         </h1>
     </div>
