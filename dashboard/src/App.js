@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="App">
         <h1 align="center">
-          Log Dashboard
+          SysLog Dashboard
         </h1>
+        <h2> Summary </h2>
+        <h2> Select the Log Duration </h2>
         <MyComponent/>
         <LogTable/>
     </div>

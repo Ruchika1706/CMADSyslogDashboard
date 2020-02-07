@@ -20,7 +20,6 @@ class MyComponent extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <p> Select the Log Duration</p>
         <label>
           <input
             type="radio"
