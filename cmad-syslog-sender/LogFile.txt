@@ -1,0 +1,28 @@
+Feb 14 09:40:10.326: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+Jan 31 06:57:45.444: %IOSXE_RP_CFG_NOT-6-IOX_SERVICE_NOTSUPPORTED: IOx service not supported.
+Jan 31 06:57:41.571: %SYS-5-CONFIG_P: Configured programmatically by process SEP_webui_wsma_http from console as admin on vty0
+Jan 31 06:57:33.505: %WEBSERVER-5-LOGIN_PASSED: R0/0: nginx: Login Successful from host 10.65.46.200 by user 'admin' using crypto cipher 'ECDHE-RSA-AES128-GCM-SHA256'
+Jan 31 06:57:31.646: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet1/10 (1), with SW-PRITHVI-SGBU-A17 FastEthernet1/0/7 (122).
+Jan 31 06:56:31.718: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet1/10 (1), with SW-PRITHVI-SGBU-A17 FastEthernet1/0/7 (122).
+Jan 31 06:55:31.658: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet1/10 (1), with SW-PRITHVI-SGBU-A17 FastEthernet1/0/7 (122).
+Jan 31 06:54:31.636: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet1/10 (1), with SW-PRITHVI-SGBU-A17 FastEthernet1/0/7 (122).
+Jan 31 06:53:31.629: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet1/10 (1), with SW-PRITHVI-SGBU-A17 FastEthernet1/0/7 (122).
+Jan 31 06:52:31.624: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet1/10 (1), with SW-PRITHVI-SGBU-A17 FastEthernet1/0/7 (122).
+Jan 31 06:52:08.034: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:52:08 UTC Tue Jan 31 2006
+Jan 31 06:51:55.021: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:55 UTC Tue Jan 31 2006
+Jan 31 06:51:54.772: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:54 UTC Tue Jan 31 2006
+Jan 31 06:51:54.520: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:54 UTC Tue Jan 31 2006
+Jan 31 06:51:54.218: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:54 UTC Tue Jan 31 2006
+Jan 31 06:51:53.439: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:53 UTC Tue Jan 31 2006
+Jan 31 06:51:46.118: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:46 UTC Tue Jan 31 2006
+Jan 31 06:51:33.241: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:33 UTC Tue Jan 31 2006
+Jan 31 06:51:32.993: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:32 UTC Tue Jan 31 2006
+Jan 31 06:51:32.743: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:32 UTC Tue Jan 31 2006
+Jan 31 06:51:32.461: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:32 UTC Tue Jan 31 2006
+Jan 31 06:51:31.615: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet1/10 (1), with SW-PRITHVI-SGBU-A17 FastEthernet1/0/7 (122).
+Jan 31 06:51:31.445: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:31 UTC Tue Jan 31 2006
+Jan 31 06:51:30.989: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:30 UTC Tue Jan 31 2006
+Jan 31 06:51:30.199: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:30 UTC Tue Jan 31 2006
+Jan 31 06:51:24.890: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:24 UTC Tue Jan 31 2006
+Jan 31 06:51:24.617: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:24 UTC Tue Jan 31 2006
+Jan 31 06:51:24.459: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.5] [localport: 80] at 06:51:24 UTC Tue Jan 31 2006
