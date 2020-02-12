@@ -1,0 +1,25 @@
+version: "3.7"
+volumes:
+  db-data:
+
+services:
+  cmad-syslog-app:
+    image: ruchika1706/syslog-app
+    ports: 
+      - 5000:80
+    depends_on:
+      - mysql
+
+  cmad-syslog-sender:
+    image: ruchika1706/syslog-sender
+    depends_on:
+      - cmad-syslog-app
+
+
+  mysql:
+    image: ruchika1706/mysql
+    volumes: 
+      - /var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: glarimy
