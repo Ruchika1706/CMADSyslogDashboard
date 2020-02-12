@@ -1,11 +1,18 @@
 pipeline {
    agent none
    stages {
-      stage('step 1') {
+      stage('docker-package') {
           agent any
           steps {
-              echo 'Jenkins build is working for cmad-syslog-app'
-          }
+              echo 'Packaging syslog-app  with docker'
+               script {
+                   docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
+                       def usersImage = docker.build("ruchika1706/syslog-app:v${env.BUILD_ID}", "cmad-syslog-app")
+                       usersImage.push()
+                       usersImage.push("latest")
+                   }
+               }
+
         }
       }
    post{
