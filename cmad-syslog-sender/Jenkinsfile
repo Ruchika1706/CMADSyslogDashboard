@@ -1,0 +1,18 @@
+pipeline {
+   agent none
+   stages {
+      stage('step 1') {
+          agent any
+          steps {
+              echo 'Jenkins build is working'
+               }
+
+          }
+      }
+   }
+   post{
+         always{
+             echo 'the job is complete'
+         }
+    }
+}
