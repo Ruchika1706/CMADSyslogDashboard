@@ -5,14 +5,13 @@ pipeline {
           agent any
           steps {
               echo 'Jenkins build is working'
-               }
-
           }
+        }
       }
    }
    post{
-         always{
+        always{
              echo 'the job is complete'
-         }
-    }
+        }
+  }
 }
