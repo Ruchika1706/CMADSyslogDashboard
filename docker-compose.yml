@@ -17,7 +17,7 @@ services:
 
 
   mysql:
-    image: ruchika1706/mysql
+    image: mysql
     volumes: 
       - /var/lib/mysql
     environment: 
