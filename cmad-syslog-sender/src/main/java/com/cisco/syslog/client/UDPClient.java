@@ -26,11 +26,12 @@ public class UDPClient {
 			Scanner myReader = new Scanner(myObj);
 			while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
-				// System.out.println(data);
+				System.out.println(data);
 				buf = data.getBytes();
 				DatagramPacket packet 
 				= new DatagramPacket(buf, buf.length, address, 520);
 				socket.send(packet);
+				System.out.println("--- SENT DATA-----");
 			}
 			myReader.close();
 		} catch (Exception e) {
