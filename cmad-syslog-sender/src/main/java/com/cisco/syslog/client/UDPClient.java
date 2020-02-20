@@ -20,21 +20,21 @@ public class UDPClient {
 	public void sendData() throws Exception{
 
 		try {
-		      File myObj = new File("LogFile.txt");
-		      Scanner myReader = new Scanner(myObj);
-		      while (myReader.hasNextLine()) {
-		        String data = myReader.nextLine();
-		       // System.out.println(data);
-		        buf = data.getBytes();
+			File myObj = new File("LogFile.txt");
+			Scanner myReader = new Scanner(myObj);
+			while (myReader.hasNextLine()) {
+				String data = myReader.nextLine();
+				// System.out.println(data);
+				buf = data.getBytes();
 				DatagramPacket packet 
 				= new DatagramPacket(buf, buf.length, address, 520);
 				socket.send(packet);
-		      }
-		      myReader.close();
-		    } catch (FileNotFoundException e) {
-		      System.out.println("An error occurred.");
-		      e.printStackTrace();
-		    }
+			}
+			myReader.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
+		}
 
 	}
 
@@ -43,7 +43,7 @@ public class UDPClient {
 	}
 	public static void main(String[] args) throws Exception {        
 		UDPClient sender = new UDPClient();
-		System.out.println("-- Running UDP Client at " + InetAddress.getLocalHost() + " --");
+		System.out.println("-- Running UDP Client at  --");
 		sender.sendData();
 	}
 
