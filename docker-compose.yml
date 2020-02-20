@@ -6,7 +6,7 @@ services:
   cmad-syslog-app:
     image: ruchika1706/syslog-app
     ports: 
-      - 5000:80
+      - 8081:8080
     depends_on:
       - mysql
 
