@@ -1,6 +1,6 @@
 version: "3.7"
 volumes:
-  db-data:
+  db-data1:
 
 services:
   cmad-syslog-app:
@@ -20,12 +20,12 @@ services:
     image: mysql:5.7
     restart: always
     volumes: 
-      - db-data:/var/lib/mysql
+      - db-data1:/var/lib/mysql
     environment: 
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: glarimy
-    ports:
-      - '3306:3306'
-    expose: 
-      - '3306'
+    # ports:
+    #   - '3306:3306'
+    # expose: 
+    #   - '3306'
     
