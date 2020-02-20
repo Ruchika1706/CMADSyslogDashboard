@@ -14,8 +14,8 @@ public class UDPClient {
 	private byte[] buf;
 
 	public UDPClient() throws Exception{
-//		socket = new DatagramSocket();
-//		address = InetAddress.getByName("cmad-syslog-app");
+		socket = new DatagramSocket();
+		address = InetAddress.getByName("cmad-syslog-app");
 	}
 
 	public void sendData() throws Exception{
