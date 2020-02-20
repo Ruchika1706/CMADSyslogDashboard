@@ -14,13 +14,16 @@ public class UDPClient {
 	private byte[] buf;
 
 	public UDPClient() throws Exception{
-		socket = new DatagramSocket();
-		address = InetAddress.getByName("cmad-syslog-app");
+//		socket = new DatagramSocket();
+//		address = InetAddress.getByName("cmad-syslog-app");
 	}
 
 	public void sendData() throws Exception{
 
 		try {
+			System.out.println("--- SENDER WAITING FOR SERVER TO BE UP-----");
+			Thread.sleep(30000);
+			System.out.println("--- SERVER AVAILABLE-----");
 			InputStream myObj = ClassLoader.getSystemClassLoader().getResourceAsStream("LogFile.txt");
 			//File myObj = new File(ClassLoader.getSystemClassLoader().getResource("LogFile.txt").getFile());
 			Scanner myReader = new Scanner(myObj);
