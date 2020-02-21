@@ -7,7 +7,6 @@ class Summary extends React.Component {
 //       this.entries = props.summaryProps;
 //   }
   render() {
-      debugger;
       this.entries = this.props.summaryProps;
     return (
       <div>

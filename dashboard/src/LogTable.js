@@ -52,7 +52,7 @@ function Table({columns, data}) {
     },
     usePagination
   )
-
+  
   // Render Data Table UI
   return (
     <>
@@ -158,7 +158,7 @@ function LogTable() {
         accessor: 'CONTENT'
     }
   ]
-
+  
   return (
     <Styles>
       <Table data={data} columns={columns}/>

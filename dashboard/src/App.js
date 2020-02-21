@@ -11,7 +11,14 @@ export default class App extends React.Component {
 
   //   // this.
   // }
-
+  componentDidMount() {
+    fetch('http://localhost:8081/syslog/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32').then(response => {
+      response.json().then(o => {
+        console.log(response.json());
+      })
+   });
+  
+  }
   render() {
 
     const summaryProps = {
