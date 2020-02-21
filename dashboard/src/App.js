@@ -14,7 +14,8 @@ export default class App extends React.Component {
   componentDidMount() {
     fetch('http://localhost:8081/syslog/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32').then(response => {
       response.json().then(o => {
-        console.log(response.json());
+        const tableProps = o;
+        console.log(tableProps);
       })
    });
   
@@ -36,7 +37,7 @@ export default class App extends React.Component {
         <h1 align="center">SysLog Dashboard</h1>
         <Summary summaryProps={summaryProps} />
         <MyComponent handleChange={this.myFn} />
-        <LogTable />
+        <LogTable tableProps={this.tableProps}/> 
       </div>
     );
   }

@@ -131,11 +131,9 @@ function Table({columns, data}) {
 }
 
 function LogTable() {
-  const data = [
-    {
-     
-    }              
-  ]
+  const data = [ {
+
+  }]         
 
   const columns = [
     {
