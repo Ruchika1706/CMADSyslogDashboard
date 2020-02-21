@@ -39,6 +39,8 @@ export default class App extends React.Component {
         <Summary summaryProps={summaryProps} />
         <MyComponent handleChange={this.myFn} />
         {console.log(this.state.tableProps)}
+        {/* TODO PASS tableProps to LogTable and inside th LogTable there is data , set data
+with this value which is passed here  */}
         <LogTable tableProps={this.state.tableProps}/> 
       </div>
     );
