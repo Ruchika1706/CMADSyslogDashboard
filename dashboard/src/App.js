@@ -5,18 +5,19 @@ import MyComponent from "./MyComponent";
 import Summary from "./Summary";
 
 export default class App extends React.Component {
-  // constructor(props) {
-  //   debugger;
-  //   super(...props);
-
-  //   // this.
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      tableProps: ''
+   }
+  }
   componentDidMount() {
     fetch('http://localhost:8081/syslog/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32').then(response => {
       response.json().then(o => {
-        const tableProps = o;
-        console.log(tableProps);
-      })
+        this.setState({
+          tableProps: o
+        });
+     })
    });
   
   }
@@ -37,7 +38,8 @@ export default class App extends React.Component {
         <h1 align="center">SysLog Dashboard</h1>
         <Summary summaryProps={summaryProps} />
         <MyComponent handleChange={this.myFn} />
-        <LogTable tableProps={this.tableProps}/> 
+        {console.log(this.state.tableProps)}
+        <LogTable tableProps={this.state.tableProps}/> 
       </div>
     );
   }
@@ -59,4 +61,4 @@ export default class App extends React.Component {
 //   );
 // }
 
-// export default App;
+//export default App;
