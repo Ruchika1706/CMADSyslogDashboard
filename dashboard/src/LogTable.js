@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { useTable, usePagination } from 'react-table'
+import { array } from 'prop-types';
 
 
 const Styles = styled.div `
@@ -131,27 +132,30 @@ function Table({columns, data}) {
 }
 
 function LogTable(props) {
-  const data = [{}]   
+  // console.log(props.tableProps)
+  debugger
+  const data = Object.values(props.tableProps)
+  // const data = JSON.parse(props.tableProps)
 
   const columns = [
     {
-      Header: 'MSG_ID',
-      accessor: 'MSG_ID'
+      Header: 'LogLevel',
+      accessor: 'logLevel'
     }, {
-      Header: 'TIME',
-      accessor: 'TIME'
+      Header: 'TimeStamp',
+      accessor: 'timeStamp'
     }, {
-      Header: 'LOG_LEVEL',
-      accessor: 'LOG_LEVEL'
+      Header: 'HostName',
+      accessor: 'hostName'
     }, {
-      Header: 'HOST_NAME',
-      accessor: 'HOST_NAME'
+      Header: 'SourceType',
+      accessor: 'sourceType'
     }, {
-        Header: 'SERVICE_TYPE',
-        accessor: 'SERVICE_TYPE'
+        Header: 'Message',
+        accessor: 'message'
     }, {
-        Header: 'CONTENT',
-        accessor: 'CONTENT'
+        Header: 'ID',
+        accessor: 'id'
     }
   ]
   
