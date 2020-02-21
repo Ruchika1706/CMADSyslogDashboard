@@ -12,13 +12,13 @@ class Summary extends React.Component {
     return (
       <div>
         <h3 align="center">Log Level Summary</h3>
-        <div>{this.entries.fatal}</div>
-        <div>{this.entries.error}</div>
-        <div>{this.entries.warn}</div>
-        <div>{this.entries.info}</div>
-        <div>{this.entries.debug}</div>
-        <div>{this.entries.trace}</div>
-        <div>{this.entries.notice}</div>
+        <div>Fatal: {this.entries.fatal}</div>
+        <div>Error: {this.entries.error}</div>
+        <div>Warning: {this.entries.warn}</div>
+        <div>Information: {this.entries.info}</div>
+        <div>Debug: {this.entries.debug}</div>
+        <div>Trace: {this.entries.trace}</div>
+        <div>Notice: {this.entries.notice}</div>
       </div>
     );
   }
