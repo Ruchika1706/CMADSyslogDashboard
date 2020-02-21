@@ -8,7 +8,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tableProps: ''
+      tableProps: 'abc'
    }
   }
   componentDidMount() {
@@ -38,6 +38,7 @@ export default class App extends React.Component {
         <h1 align="center">SysLog Dashboard</h1>
         <Summary summaryProps={summaryProps} />
         <MyComponent handleChange={this.myFn} />
+        {console.log("Ruchika Luthra")}
         {console.log(this.state.tableProps)}
         {/* TODO PASS tableProps to LogTable and inside th LogTable there is data , set data
 with this value which is passed here  */}

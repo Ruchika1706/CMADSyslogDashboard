@@ -130,8 +130,8 @@ function Table({columns, data}) {
   )
 }
 
-function LogTable() {
-  const data = [ {}]    
+function LogTable(props) {
+  const data = [{}]   
 
   const columns = [
     {
