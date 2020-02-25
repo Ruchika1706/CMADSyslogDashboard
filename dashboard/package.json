@@ -12,7 +12,8 @@
     "react-native-paper": "^3.5.1",
     "react-scripts": "3.3.0",
     "react-table": "^7.0.0-rc.16",
-    "typescript": "^3.2.1"
+    "styled-components": "^5.0.1",
+    "typescript": "^3.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
