@@ -8,7 +8,7 @@ agent none
       echo 'Packaging syslog UI  app with docker'
       script{
 			docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') { 
-			def usersImage = docker.build("ruagrawa/syslog-dashboard:v${env.BUILD_ID}", "dashboard")
+			def usersImage = docker.build("ruchika1706/syslog-dashboard:v${env.BUILD_ID}", "dashboard")
 			usersImage.push()
 			usersImage.push("latest")
 			}
