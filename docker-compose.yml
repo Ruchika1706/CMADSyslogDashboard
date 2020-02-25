@@ -14,7 +14,11 @@ services:
     image: ruchika1706/syslog-sender
     depends_on:
       - cmad-syslog-app
-
+ 
+  cmad-syslog-dashboard:
+    image: ruchika1706/syslog-dashboard
+    ports:
+      - 3000:3000
 
   mysql:
     image: mysql:5.7
