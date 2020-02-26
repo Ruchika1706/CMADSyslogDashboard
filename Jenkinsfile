@@ -15,20 +15,6 @@ pipeline {
 
         }
       }
-            stage('docker-package-sql') {
-          agent any
-          steps {
-              echo 'Packaging mysql with docker'
-               script {
-                   docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
-                       def usersImage = docker.build("ruchika1706/mysql:v${env.BUILD_ID}", "mysql")
-                       usersImage.push()
-                       usersImage.push("latest")
-                   }
-               }
-
-        }
-      }
             stage('docker-package-sender') {
           agent any
           steps {
