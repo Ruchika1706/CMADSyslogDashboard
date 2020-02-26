@@ -4,19 +4,19 @@ volumes:
 
 services:
   cmad-syslog-app:
-    image: ruchika1706/syslog-app
+    image: ruagrawa/syslog-app
     ports: 
       - 8081:8080
     depends_on:
       - mysql
 
   cmad-syslog-sender:
-    image: ruchika1706/syslog-sender
+    image: ruagrawa/syslog-sender
     depends_on:
       - cmad-syslog-app
  
   cmad-syslog-dashboard:
-    image: ruchika1706/syslog-dashboard
+    image: ruagrawa/syslog-dashboard
     ports:
       - 3000:3000
 
