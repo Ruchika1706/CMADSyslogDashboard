@@ -133,7 +133,6 @@ function Table({columns, data}) {
 
 function LogTable(props) {
   // console.log(props.tableProps)
-  debugger
   const data = Object.values(props.tableProps)
   // const data = JSON.parse(props.tableProps)
 
