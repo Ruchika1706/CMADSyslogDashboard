@@ -5,7 +5,8 @@ class MyComponent extends React.Component {
     super();
   }
   state = {
-    value: ""
+    value: "",
+    checked: "1 hour"
   }
   handleChange(event) {
     // this.setState(
@@ -13,7 +14,8 @@ class MyComponent extends React.Component {
     //     value: "event.target.value"
     //   }
     // );
-    this.props.handleChange();
+    this.setState({checked: event.target.value});
+    this.props.handleChange(event);
   }
   handleSubmit(event){
     alert(`You chose ${this.state.value}`);
@@ -29,6 +31,7 @@ class MyComponent extends React.Component {
               name="select-duration"
               value="1 hour"
               // checked={this.state.value == "hour"}
+              checked={this.state.checked === "1 hour"}
               onChange={this.handleChange.bind(this)}
             />
             1 Hour
@@ -39,6 +42,7 @@ class MyComponent extends React.Component {
               name="select-duration"
               value="1 day"
               // checked={this.state.value == "day"}
+              checked={this.state.checked === "1 day"}
               onChange={this.handleChange.bind(this)}
             />
             1 Day
@@ -49,6 +53,7 @@ class MyComponent extends React.Component {
               name="select-duration"
               value="1 week"
               // checked={this.state.value == "week"}
+              checked={this.state.checked === "1 week"}
               onChange={this.handleChange.bind(this)}
             />
             1 Week

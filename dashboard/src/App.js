@@ -12,13 +12,16 @@ export default class App extends React.Component {
    }
   }
   componentDidMount() {
-    fetch('http://localhost:8081/syslog/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32').then(response => {
-      response.json().then(o => {
-        this.setState({
-          tableProps: o
-        });
-     })
-   });
+    let fromDate = "2020-01-31 06:51:24";
+    let toDate = "2020-01-31 06:51:32";
+    this.fetchData(fromDate, toDate);
+  //   fetch('http://localhost:8081/syslog/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32').then(response => {
+  //     response.json().then(o => {
+  //       this.setState({
+  //         tableProps: o
+  //       });
+  //    })
+  //  });
   
   }
   render() {
@@ -37,7 +40,7 @@ export default class App extends React.Component {
       <div className="App">
         <h1 align="center">SysLog Dashboard</h1>
         <Summary summaryProps={summaryProps} />
-        <MyComponent handleChange={this.myFn} />
+        <MyComponent handleChange={this.myFn.bind(this)} />
         {console.log("Ruchika Luthra")}
         {console.log(this.state.tableProps)}
         {/* TODO PASS tableProps to LogTable and inside th LogTable there is data , set data
@@ -47,9 +50,33 @@ with this value which is passed here  */}
     );
   }
 
-  myFn() {
+  myFn(evt) {
     console.log("inside");
-    
+    let selectedDuration = evt.target.value;
+    let fromDate = "2020-01-31 06:51:24";
+    let toDate = "2020-01-31 06:51:32";
+    switch(selectedDuration) {
+      case '1 hour':
+          // need to update fromdate and todate
+      break;
+      case '1 day':
+        // need to update fromdate and todate
+        break;
+      case '1 week':
+        // need to update fromdate and todate
+      break;
+    }
+    this.fetchData(fromDate, toDate);
+  }
+
+  fetchData(fromDate, toDate) {
+    fetch('http://localhost:8081/syslog/?fromDate='+fromDate+'&toDate='+toDate).then(response => {
+      response.json().then(o => {
+        this.setState({
+          tableProps: o
+        });
+     })
+   });
   }
 }
 // function App() {
