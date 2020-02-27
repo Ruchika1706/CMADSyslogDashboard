@@ -22,39 +22,35 @@ class Summary extends React.Component {
         <h3 align="center">Log Level Summary</h3>
  
         <div> {this.entries.FATAL ?
-        		<label for="Fatal" class="logLevellabel">Fatal : {this.entries.FATAL}</label>
-        		:<label for="Fatal" class="logLevellabel">Fatal :0</label>
+        		<label htmlFor="Fatal" className="logLevellabel">Fatal : {this.entries.FATAL}</label>
+        		:<label htmlFor="Fatal" className="logLevellabel">Fatal :0</label>
         		}
         {this.entries.ERROR ?
-        		<label for="Error" class="logLevellabel">Error : {this.entries.ERROR}</label>
-        		:<label for="Error" class="logLevellabel">Error :0</label>
+        		<label htmlFor="Error" className="logLevellabel">Error : {this.entries.ERROR}</label>
+        		:<label htmlFor="Error" className="logLevellabel">Error :0</label>
         		}
         {this.entries.WARNING ?
-        		<label for="Warn" class="logLevellabel">Warn : {this.entries.WARNING}</label>
-        		:<label for="Warn" class="logLevellabel">Warn :0</label>
+        		<label htmlFor="Warn" className="logLevellabel">Warn : {this.entries.WARNING}</label>
+        		:<label htmlFor="Warn" className="logLevellabel">Warn :0</label>
         		}
         {this.entries.INFO ?
-        		<label for="Info" class="logLevellabel">Info : {this.entries.INFO}</label>
-        		:<label for="Info" class="logLevellabel">Info :0</label>
+        		<label htmlFor="Info" className="logLevellabel">Info : {this.entries.INFO}</label>
+        		:<label htmlFor="Info" className="logLevellabel">Info :0</label>
         		}
         {this.entries.DBUG ?
-        		<label for="Debug" class="logLevellabel">Debug : {this.entries.DEBUG}</label>
-        		:<label for="Debug" class="logLevellabel">Debug :0</label>
+        		<label htmlFor="Debug" className="logLevellabel">Debug : {this.entries.DEBUG}</label>
+        		:<label htmlFor="Debug" className="logLevellabel">Debug :0</label>
         		}
         {this.entries.TRACE ?
-        		<label for="Trace" class="logLevellabel">Trace : {this.entries.TRACE}</label>
-        		:<label for="Trace" class="logLevellabel">Trace :0</label>
+        		<label htmlFor="Trace" className="logLevellabel">Trace : {this.entries.TRACE}</label>
+        		:<label htmlFor="Trace" className="logLevellabel">Trace :0</label>
         		}
         {this.entries.NOTICE ?
-        		<label for="Notice" class="logLevellabel">Notice : {this.entries.NOTICE}</label>
-        		:<label for="Notice" class="logLevellabel">Notice :0</label>
+        		<label htmlFor="Notice" className="logLevellabel">Notice : {this.entries.NOTICE}</label>
+        		:<label htmlFor="Notice" className="logLevellabel">Notice :0</label>
         		}
-        
         </div>
         </div>
-
-   
-
     );
   }
 

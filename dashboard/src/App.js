@@ -1,4 +1,5 @@
 import React from "react";
+import moment from 'moment';
 import "./App.css";
 import LogTable from "./LogTable";
 import MyComponent from "./MyComponent";
@@ -13,17 +14,11 @@ export default class App extends React.Component {
    }
   }
   componentDidMount() {
-    let fromDate = "2020-01-31 06:51:24";
-    let toDate = "2020-01-31 06:51:32";
-    this.fetchData(fromDate, toDate);
-  //   fetch('http://localhost:8081/syslog/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32').then(response => {
-  //     response.json().then(o => {
-  //       this.setState({
-  //         tableProps: o
-  //       });
-  //    })
-  //  });
-  
+    let toDate = moment(Date.now()).format("YYYY-MM-DD hh:mm:ss");
+    let fromDate = moment().subtract(7, 'd').format('YYYY-MM-DD HH:mm:ss')
+    // let fromDate = "2020-01-31 06:51:24";
+    // let toDate = "2020-01-31 06:51:32";
+    this.fetchData(fromDate, toDate);  
   }
   render() {
 
@@ -54,24 +49,29 @@ with this value which is passed here  */}
   myFn(evt) {
     console.log("inside");
     let selectedDuration = evt.target.value;
-    let fromDate = "2020-01-31 06:51:24";
-    let toDate = "2020-01-31 06:51:32";
+    let fromDate = "";
+    let toDate = moment(Date.now()).format("YYYY-MM-DD hh:mm:ss");
     switch(selectedDuration) {
       case '1 hour':
-          // need to update fromdate and todate
+          fromDate = moment(Date.now()).subtract(1, 'h').format("YYYY-MM-DD hh:mm:ss");
+          console.log(fromDate);
       break;
       case '1 day':
-        // need to update fromdate and todate
+        fromDate = moment(Date.now()).subtract(1, 'd').format("YYYY-MM-DD hh:mm:ss");
+        console.log(fromDate);
         break;
       case '1 week':
-        // need to update fromdate and todate
-      break;
+        fromDate = moment().subtract(7, 'd').startOf('day').format('YYYY-MM-DD HH:mm:ss')
+        console.log(fromDate);
+        break;
     }
+    console.log(fromDate);
+    console.log(toDate);
     this.fetchData(fromDate, toDate);
   }
 
   fetchData(fromDate, toDate) {
-	  Promise.all([fetch('http://localhost:8081/syslog/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32'), fetch('http://localhost:8081/stats/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32')])
+	  Promise.all([fetch(`http://localhost:8081/syslog/?fromDate=${fromDate}&toDate=${toDate}`), fetch(`http://localhost:8081/stats/?fromDate=${fromDate}&toDate=${toDate}`)])
 
       .then(([res1, res2]) => { 
          return Promise.all([res1.json(), res2.json()]) 
@@ -83,20 +83,7 @@ with this value which is passed here  */}
           });
     	  
 
-      });
+      }).catch(err => alert(err));
   
   }
 }
-// function App() {
-  
-//   return (
-//     <div className="App">
-//       <h1 align="center">SysLog Dashboard</h1>
-//       <Summary summaryPros={summaryPros} />
-//       <MyComponent />
-//       <LogTable />
-//     </div>
-//   );
-// }
-
-//export default App;

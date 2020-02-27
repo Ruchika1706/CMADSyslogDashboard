@@ -6,7 +6,7 @@ class MyComponent extends React.Component {
   }
   state = {
     value: "",
-    checked: "1 hour"
+    checked: "1 week"
   }
   handleChange(event) {
     // this.setState(
@@ -50,6 +50,7 @@ class MyComponent extends React.Component {
           <label>
             <input
               type="radio"
+
               name="select-duration"
               value="1 week"
               // checked={this.state.value == "week"}

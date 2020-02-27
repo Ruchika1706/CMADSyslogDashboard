@@ -30,7 +30,7 @@ public class SyslogController {
 	public ResponseEntity<List<Syslog>> getSyslogs(@RequestParam(name = "fromDate") String fromDate,
 			@RequestParam(name = "toDate") String toDate) {
 		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			java.sql.Timestamp startDate = new java.sql.Timestamp(
 					syslogService.convertStringToDate(fromDate, dateFormat, true).getTime());
 			java.sql.Timestamp endDate = new java.sql.Timestamp(
@@ -52,7 +52,7 @@ public class SyslogController {
 	public ResponseEntity<Map<String, Integer>> getStats(@RequestParam(name = "fromDate") String fromDate,
 			@RequestParam(name = "toDate") String toDate) {
 		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			java.sql.Timestamp startDate = new java.sql.Timestamp(
 					syslogService.convertStringToDate(fromDate, dateFormat, true).getTime());
 			java.sql.Timestamp endDate = new java.sql.Timestamp(
