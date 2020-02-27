@@ -8,7 +8,8 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tableProps: 'abc'
+      tableProps: 'abc',
+      summaryProps:''
    }
   }
   componentDidMount() {
@@ -26,20 +27,20 @@ export default class App extends React.Component {
   }
   render() {
 
-    const summaryProps = {
-      fatal: 13,
-      error: 13,
-      warn: 13,
-      info: 13,
-      debug: 13,
-      trace: 13,
-      notice:13,
-    };
+//    const summaryProps = {
+//      fatal: 13,
+//      error: 13,
+//      warn: 13,
+//      info: 13,
+//      debug: 13,
+//      trace: 13,
+//      notice:13,
+//    };
 
     return (
       <div className="App">
         <h1 align="center">SysLog Dashboard</h1>
-        <Summary summaryProps={summaryProps} />
+        <Summary summaryProps={this.state.summaryProps} />
         <MyComponent handleChange={this.myFn.bind(this)} />
         {console.log("Ruchika Luthra")}
         {console.log(this.state.tableProps)}
@@ -70,13 +71,20 @@ with this value which is passed here  */}
   }
 
   fetchData(fromDate, toDate) {
-    fetch('http://localhost:8081/syslog/?fromDate='+fromDate+'&toDate='+toDate).then(response => {
-      response.json().then(o => {
-        this.setState({
-          tableProps: o
-        });
-     })
-   });
+	  Promise.all([fetch('http://localhost:8081/syslog/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32'), fetch('http://localhost:8081/stats/?fromDate=2020-01-31 06:51:24&toDate=2020-01-31 06:51:32')])
+
+      .then(([res1, res2]) => { 
+         return Promise.all([res1.json(), res2.json()]) 
+      })
+      .then(([res1, res2]) => {
+    	  this.setState({
+            tableProps: res1,
+            summaryProps:res2
+          });
+    	  
+
+      });
+  
   }
 }
 // function App() {

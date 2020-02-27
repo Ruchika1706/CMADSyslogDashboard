@@ -12,6 +12,15 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.logLevellabel {
+ margin-right: 8px;
+ font-weight:bold;
+ color: #2b2e4a;
+ background-color: aqua;
+ font-sixe:x-large;
+ padding:10px;
+}
+
 
 .App-header {
   background-color: #282c34;

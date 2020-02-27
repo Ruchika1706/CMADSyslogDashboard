@@ -36,6 +36,9 @@ public class SyslogController {
 			java.sql.Timestamp endDate = new java.sql.Timestamp(
 					syslogService.convertStringToDate(toDate, dateFormat, true).getTime());
 			List<Syslog> syslogList = syslogService.getLogsByPeriod(startDate, endDate);
+			for (Syslog syslog : syslogList) {
+				syslog.setDateTimeStr(syslog.getTimeStamp().toString());
+			}
 			return new ResponseEntity<List<Syslog>>(syslogList, HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<List<Syslog>>(Collections.EMPTY_LIST, HttpStatus.BAD_REQUEST);

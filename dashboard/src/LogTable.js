@@ -142,7 +142,7 @@ function LogTable(props) {
       accessor: 'logLevel'
     }, {
       Header: 'TimeStamp',
-      accessor: 'timeStamp'
+      accessor: 'dateTimeStr'
     }, {
       Header: 'HostName',
       accessor: 'hostName'

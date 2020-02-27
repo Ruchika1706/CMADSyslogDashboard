@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 public class Syslog {
 	@Id
@@ -13,6 +15,16 @@ public class Syslog {
 	private LogLevel logLevel;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date timeStamp;
+
+	@JsonProperty(access = com.fasterxml.jackson.annotation.JsonProperty.Access.READ_ONLY)
+	private String dateTimeStr;
+	public String getDateTimeStr() {
+		return dateTimeStr;
+	}
+	public void setDateTimeStr(String dateTimeStr) {
+		this.dateTimeStr = dateTimeStr;
+	}
+
 	private String hostName;
 	private String sourceType;
 	private String message;
